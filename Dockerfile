@@ -7,8 +7,3 @@ RUN echo "IncludeOptional /var/www/html/public/*/*/*.conf" >> /etc/apache2/apach
     && curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
 
 ADD ./templates/apache2/sites.conf /etc/apache2/sites-enabled/000-default.conf
-
-
-
-
-
