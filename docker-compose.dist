@@ -1,0 +1,44 @@
+version: '3.9'
+
+services:
+  elasticsearch:
+    image: elasticsearch:7.5.2
+    container_name: logeecom_elastic
+    networks:
+      - web
+    environment:
+      - "EA_JAVA_OPTS=-Xms512m -Xms512m"
+      - discovery.type=single-node
+    volumes:
+      - "logeecom_elastic_volume:/usr/share/elasticsearch/data"
+  app:
+    image: dreg.devcore.logeecom.com/e-integrations-dev-env:latest
+    container_name: logeecom_dev
+    ports:
+      - "80:80"
+      - "443:443"
+      - "3336:3390"
+      - "2222:22"
+      - "8888:8888"
+      - "9999:9999"
+    volumes:
+      - "logeecom_db_volume:/var/lib/mysql"
+      - "./../../systems:/var/www/html/public/"
+      - "./../../integrations:/var/www/workspace/"
+      - $HOME/.ssh:/var/www/.ssh:ro
+      - $HOME/.ssh:/root/.ssh:ro
+    networks:
+      - web
+    environment:
+      - XDEBUG_ENABLED=1
+      - XDEBUG_REMOTE_HOST=172.17.0.1
+      - PHP_VERSION=7.4
+
+volumes:
+  logeecom_elastic_volume:
+    name: logeecom_elastic_volume
+  logeecom_db_volume:
+    name: logeecom_db_volume
+networks:
+  web:
+    external: false
