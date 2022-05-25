@@ -5,7 +5,7 @@
  _This repository is a [Dockware](https://docs.dockware.io/) fork, customized for faster and easier integration development._
 
 ## How to run a docker environment?
-- Create a docker compose file based on the following [template]([https://docs.dockware.io/](https://github.com/logeecom-dev/e-integrations-docker-env/blob/main/docker-compose.dist).
+- Create a docker compose file based on the following [template](https://github.com/logeecom-dev/e-integrations-docker-env/blob/main/docker-compose.dist).
 - Drag and drop images (requires your Dropbox account be linked)
 - Import and save files from GitHub, Dropbox, Google Drive and One Drive
 - Drag and drop markdown and HTML files into Dillinger
