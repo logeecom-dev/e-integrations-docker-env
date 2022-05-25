@@ -6,6 +6,6 @@
 
 ## How to run a docker environment?
 - Create a docker compose file based on the following [template](https://github.com/logeecom-dev/e-integrations-docker-env/blob/main/docker-compose.dist).
-- - > Note: `--capt-add=SYS-ADMIN` is required for PDF rendering.
+ > Note: `--capt-add=SYS-ADMIN` is required for PDF rendering.
 - Customize [env variables](https://docs.dockware.io/features/environment-variables)
 - 
