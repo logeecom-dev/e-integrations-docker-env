@@ -6,7 +6,6 @@
 
 ## How to run a docker environment?
 - Create a docker compose file based on the following [template](https://github.com/logeecom-dev/e-integrations-docker-env/blob/main/docker-compose.dist).
-- Drag and drop images (requires your Dropbox account be linked)
-- Import and save files from GitHub, Dropbox, Google Drive and One Drive
-- Drag and drop markdown and HTML files into Dillinger
-- Export documents as Markdown, HTML and PDF
+- - > Note: `--capt-add=SYS-ADMIN` is required for PDF rendering.
+- Customize [env variables](https://docs.dockware.io/features/environment-variables)
+- 
