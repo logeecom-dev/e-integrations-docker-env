@@ -6,6 +6,7 @@
 
 ## What are the main differences compared to dockware ?
 - [nvm support](https://github.com/nvm-sh/nvm)
+- [mod_vhost_alias](https://httpd.apache.org/docs/2.4/mod/mod_vhost_alias.html#virtualdocumentroot)
 
 ## How to run a docker environment?
 - Create a docker compose file based on the following [template](https://github.com/logeecom-dev/e-integrations-docker-env/blob/main/docker-compose.dist).
