@@ -5,7 +5,7 @@
  _This repository is a [Dockware](https://docs.dockware.io/) fork, customized for faster and easier integration development._
 
 ## What are the main differences compared to dockware ?
-
+- https://github.com/nvm-sh/nvm
 
 ## How to run a docker environment?
 - Create a docker compose file based on the following [template](https://github.com/logeecom-dev/e-integrations-docker-env/blob/main/docker-compose.dist).
