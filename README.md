@@ -4,6 +4,9 @@
 
  _This repository is a [Dockware](https://docs.dockware.io/) fork, customized for faster and easier integration development._
 
+## What are the main differences compared to dockware ?
+
+
 ## How to run a docker environment?
 - Create a docker compose file based on the following [template](https://github.com/logeecom-dev/e-integrations-docker-env/blob/main/docker-compose.dist).
  > Note: Elasticsearch is optional and it has been added to the compose file, due to the version of the magenta that requires it.
