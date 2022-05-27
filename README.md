@@ -10,6 +10,6 @@
 
 ## How to run a docker environment?
 - Create a docker compose file based on the following [template](https://github.com/logeecom-dev/e-integrations-docker-env/blob/main/docker-compose.dist).
- > Note: Elasticsearch is optional and it has been added to the compose file, due to the version of the magenta that requires it.
+ > Note: Elasticsearch is optional and it has been added to the compose file, due to the version of the magento that requires it.
 - Customize [env variables](https://docs.dockware.io/features/environment-variables)
 - Create bind mounts
