@@ -13,3 +13,4 @@
  > Note: Elasticsearch is optional and it has been added to the compose file, due to the version of the magento that requires it.
 - Customize [env variables](https://docs.dockware.io/features/environment-variables)
 - Create bind mounts (systems and integrations folders) 
+- docker compose up -d 
