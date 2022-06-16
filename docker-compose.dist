@@ -23,8 +23,8 @@ services:
       - "9999:9999"
     volumes:
       - "logeecom_db_volume:/var/lib/mysql"
-      - "./../../systems:/var/www/html/public/"
-      - "./../../integrations:/var/www/workspace/"
+      - "./systems:/var/www/html/public/"
+      - "./integrations:/var/www/workspace/"
       - $HOME/.ssh:/var/www/.ssh:ro
       - $HOME/.ssh:/root/.ssh:ro
     networks:
