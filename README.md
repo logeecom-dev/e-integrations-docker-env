@@ -35,3 +35,4 @@ These frameworks require that the root folder in the web server configuration be
       #RewriteRule ^ index.php [L]
       RewriteRule ^(/)?$ public/index.php [L]
       </IfModule>
+## System vs Integration ? 
