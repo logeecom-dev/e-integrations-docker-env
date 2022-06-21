@@ -19,7 +19,7 @@
 The simplest way is to create a single vhost file within a folder for a specific system, for example /var/www/html/public/wp/5-9-3/wp.conf.
 
 ## How to run symfony/laravel application (root is publicfolder)? 
-These frameworks require that the root folder in the web server configuration be set to a public folder. This can be solved in two ways. A custom virtual host can be created, or a .htacces file with the following content can be added within the project:
+These frameworks require that the DocumentRoot folder in the web server configuration be set to a public folder. This can be solved in two ways. A custom virtual host can be created, or a .htacces file with the following content can be added within the project:
       <IfModule mod_rewrite.c>
       Options +FollowSymLinks
       RewriteEngine On
