@@ -75,3 +75,4 @@ After that, go to SSH/SSL tab, check 'Use SSH tunnel' and add SSH connection:
 Test your connection, and if it is successful, you will be able to access database inside docker container.
 
 ## How to setup xdebug with PHPSTORM ?
+//TBD
