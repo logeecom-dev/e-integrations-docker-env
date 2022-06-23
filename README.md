@@ -36,19 +36,23 @@ These frameworks require that the DocumentRoot folder in the web server configur
       RewriteRule ^(/)?$ public/index.php [L]
       </IfModule>
 ## System vs Integration ? 
+The idea is to separate system and integration in different directories, and to connect them with Linux symlinks. Here is description of that process:
 Add your system installation in folder */var/www/html/public/[system-name]/[system-version]* and install your system.
 Clone integration to folder */var/www/workspace* and link it to system folder where plugins are stored.
+
 *For example, installing Shopware5 system can be done through browser. Go to [system-version].[system-name].localhost and follow Shopware instructions.
-If you want to put CleverReach plugin to this system, after cloning integration repository to workspace directory, just run command*
+If you want to put some plugin to this system, after cloning integration repository to workspace directory, just run command*
 ```
-ln -s /var/www/workspace/[path-to-integration-src] /var/www/html/public/[system-name]/[system-version]/engine/Shopware/Plugins/Local/Frontend/CrswCleverReach
+ln -s /var/www/workspace/[path-to-integration-src] /var/www/html/public/[system-name]/[system-version]/engine/Shopware/Plugins/Local/Frontend/[integration-name]
 ```
 *and your integration will be available in your system.*
+
 ## How to run composer inside container?
 If you have multiple SSH keys, you have to specify which of them are you using for running composer (specify the key which is connected to logeecom github):
 ```
 GIT_SSH_COMMAND='ssh -i /root/.ssh/id_rsa_github -o IdentitiesOnly=yes' composer install
 ```
+
 ## How to setup db connection inside PHPSTORM?
 Create new MySql database instance in PHPStorm and configure it as on the picture:
 ![image](https://user-images.githubusercontent.com/88436311/175286964-843a0505-7ae9-42ae-8ba0-28ef42daf05a.png)
@@ -67,4 +71,4 @@ After that, go to SSH/SSL tab, check 'Use SSH tunnel' and add SSH connection:
   username: dockware
   password: dockware
   ```
-Test your connection, and if it is successful, you will be able to access databases inside docker container.
+Test your connection, and if it is successful, you will be able to access database inside docker container.
