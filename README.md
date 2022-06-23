@@ -20,20 +20,21 @@ The simplest way is to create a single vhost file within a folder for a specific
 
 ## How to run symfony/laravel application (when DocumentRoot is public folder)? 
 These frameworks require that the DocumentRoot folder in the web server configuration be set to a public folder. This can be solved in two ways. A custom virtual host can be created, or a .htacces file with the following content can be added within the project:
+      
       <IfModule mod_rewrite.c>
-      Options +FollowSymLinks
-      RewriteEngine On
+       Options +FollowSymLinks
+       RewriteEngine On
 
-      RewriteCond %{REQUEST_URI} !^/public/
+       RewriteCond %{REQUEST_URI} !^/public/
 
-      RewriteCond %{REQUEST_FILENAME} !-d
-      RewriteCond %{REQUEST_FILENAME} !-f
+       RewriteCond %{REQUEST_FILENAME} !-d
+       RewriteCond %{REQUEST_FILENAME} !-f
 
 
 
-      RewriteRule ^(.*)$ /public/$1
-      #RewriteRule ^ index.php [L]
-      RewriteRule ^(/)?$ public/index.php [L]
+       RewriteRule ^(.*)$ /public/$1
+       #RewriteRule ^ index.php [L]
+       RewriteRule ^(/)?$ public/index.php [L]
       </IfModule>
 ## System vs Integration ? 
 The idea is to separate system and integration in different directories, and to connect them with Linux symlinks. Here is description of that process:
