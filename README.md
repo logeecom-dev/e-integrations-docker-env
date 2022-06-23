@@ -36,8 +36,35 @@ These frameworks require that the DocumentRoot folder in the web server configur
       RewriteRule ^(/)?$ public/index.php [L]
       </IfModule>
 ## System vs Integration ? 
-//TBD
+Add your system installation in folder */var/www/html/public/[system-name]/[system-version]* and install your system.
+Clone integration to folder */var/www/workspace* and link it to system folder where plugins are stored.
+*For example, installing Shopware5 system can be done through browser. Go to [system-version].[system-name].localhost and follow Shopware instructions.
+If you want to put CleverReach plugin to this system, after cloning integration repository to workspace directory, just run command*
+```
+ln -s /var/www/workspace/[path-to-integration-src] /var/www/html/public/[system-name]/[system-version]/engine/Shopware/Plugins/Local/Frontend/CrswCleverReach
+```
+*and your integration will be available in your system.*
 ## How to run composer inside container?
-//TBD
+If you have multiple SSH keys, you have to specify which of them are you using for running composer (specify the key which is connected to logeecom github):
+```
+GIT_SSH_COMMAND='ssh -i /root/.ssh/id_rsa_github -o IdentitiesOnly=yes' composer install
+```
 ## How to setup db connection inside PHPSTORM?
-
+Create new MySql database instance in PHPStorm and configure it as on the picture:
+![image](https://user-images.githubusercontent.com/88436311/175286964-843a0505-7ae9-42ae-8ba0-28ef42daf05a.png)
+with credentials:
+```
+username: root
+password: root
+```
+After that, go to SSH/SSL tab, check 'Use SSH tunnel' and add SSH connection:
+- Click on ... option
+- Add new SSH connection
+- Configure it as on the picture:
+  ![image](https://user-images.githubusercontent.com/88436311/175287940-1b3dc4ab-1c8f-49bf-9293-aa7f10a55a23.png)
+  with credentials:
+  ```
+  username: dockware
+  password: dockware
+  ```
+Test your connection, and if it is successful, you will be able to access databases inside docker container.
