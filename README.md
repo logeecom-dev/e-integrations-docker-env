@@ -37,6 +37,7 @@ These frameworks require that the DocumentRoot folder in the web server configur
       </IfModule>
 ## System vs Integration ? 
 //TBD
-## How to configure dnsmasq?
+## How to run composer inside container?
 //TBD
+## How to setup db connection inside PHPSTORM?
 
