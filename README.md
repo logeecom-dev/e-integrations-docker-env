@@ -77,11 +77,11 @@ Test your connection, and if it is successful, you will be able to access databa
 
 Add new PHP Remote debug configuration:
 - IDE key(session id): PHPSTORM
-- Name must be like: [system-version].[system-name].localhost
+- Name should be like: [system-version].[system-name].localhost
 ![debug1](https://user-images.githubusercontent.com/101107199/180241407-05108d2b-514a-4d4a-a110-79c26f43a39c.png)
 
 Server Configuration:
-- Name and host must be like *[system-version].[system-name].localhost*
+- Name and host should be like *[system-version].[system-name].localhost*
 - Check *Use path mappings*
 - Map project files:
   - Local path: */[path-to-integrations-directory]/integrations/[path-to-integration-src]*
