@@ -10,6 +10,7 @@ RUN echo "IncludeOptional /var/www/html/public/*/*/*.conf" >> /etc/apache2/apach
     && echo "\nxdebug.start_with_request = yes" >> /etc/php/8.1/fpm/conf.d/20-xdebug.ini \
     && echo "\nxdebug.start_with_request = yes" >> /etc/php/8.0/fpm/conf.d/20-xdebug.ini \
     && echo "\nxdebug.start_with_request = yes" >> /etc/php/7.4/fpm/conf.d/20-xdebug.ini \
+    && echo "\nxdebug.start_with_request = yes" >> /etc/php/7.4/fpm/conf.d/20-xdebug.ini_disabled \
     && echo "\nxdebug.start_with_request = yes" >> /etc/php/7.3/fpm/conf.d/20-xdebug.ini \
     && echo "xdebug.start_with_request = yes" >> /etc/php/7.2/fpm/conf.d/20-xdebug.ini \
     && sed -i  's/xdebug.remote_autostart = 0//g' /etc/php/7.1/fpm/conf.d/20-xdebug.ini \
