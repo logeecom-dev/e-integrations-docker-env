@@ -75,4 +75,20 @@ After that, go to SSH/SSL tab, check 'Use SSH tunnel' and add SSH connection:
 Test your connection, and if it is successful, you will be able to access database inside docker container.
 ## How to setup xdebug with PHPSTORM ?
 
+Add new PHP Remote debug configuration:
+- IDE key(session id): PHPSTORM
+- Name must be like: [system-version].[system-name].localhost
+![debug1](https://user-images.githubusercontent.com/101107199/180241407-05108d2b-514a-4d4a-a110-79c26f43a39c.png)
+
+Server Configuration:
+- Name and host must be like *[system-version].[system-name].localhost*
+- Check *Use path mappings*
+- Map project files:
+  - Local path: */[path-to-integrations-directory]/integrations/[path-to-integration-src]*
+  - Absolute path on server: */var/www/workspace/[path-to-integration-src]*
+- Map include (systems) path (if needed):
+  - Local path: */[path-to-systems-directory]/systems/[system-name]/[system-version]*
+  - Absolute path on server: */var/www/html/public/[system-name]/[system-version]*
+- Click Apply and check if it works.
+![debug2](https://user-images.githubusercontent.com/101107199/180241456-73479384-e2d6-46f4-a27a-609d563117f3.png)
 
