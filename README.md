@@ -92,7 +92,7 @@ Server Configuration:
 
 The simplest way is to create a single vhost file within a folder for a specific system or custom project (for example /var/www/html/public/[system-name]/[system-version]/vhost.conf).
 
-## How to run symfony/laravel application (when DocumentRoot is public folder)? 
+## How to run symfony/laravel application (when DocumentRoot is public folder) without custom vhost file? 
 These frameworks require that the DocumentRoot folder in the web server configuration be set to a public folder. This can be solved in two ways. A custom virtual host can be created, or a .htaccess file with the following content can be added within the project:
       
       <IfModule mod_rewrite.c>
