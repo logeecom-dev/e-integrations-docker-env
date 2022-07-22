@@ -23,7 +23,10 @@ curl https://raw.githubusercontent.com/logeecom-dev/e-integrations-docker-env/ma
 ```sh
 mkdir -p integrations && mkdir -p systems
 ```
-- docker compose up -d 
+- Run docker compose
+ ```sh
+docker compose up -d
+```
 
 ## How to create custom vhost ?
 The simplest way is to create a single vhost file within a folder for a specific system, for example /var/www/html/public/wp/5-9-3/wp.conf.
