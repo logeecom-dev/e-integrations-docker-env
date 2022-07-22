@@ -9,6 +9,10 @@
 - [mod_vhost_alias support](https://httpd.apache.org/docs/2.4/mod/mod_vhost_alias.html#virtualdocumentroot) - VirtualDocumentRoot is a directive to the Apache module mod_vhost_alias. It sets the document root to a dynamic path that may contain variables which are evaluated when an actual request is handled. That way the effective document root can depend on the actual host name and port number requested, without defining separate virtual hosts for all the combinations. By default apache2 tries to find the webroot in the following format /var/www/html/public/[second part of domain]/[first part of domain]. If the domain for example is 4-4-1.magento2.local, then the web root should be / var/www/html/public/magento2/4-4-1.
 
 ## How to run a docker environment?
+- Login to logeecom docker registry (You will need a username and password for which you should ask branko.janjic@logeecom.com)
+```sh
+docker login dreg.devcore.logeecom.com
+```
 - Create project folder 
 ```sh
 mkdir -p e-integrations && cd e-integrations
