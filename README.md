@@ -27,28 +27,6 @@ mkdir -p integrations && mkdir -p systems
  ```sh
 docker compose up -d
 ```
-
-## How to create custom vhost ?
-The simplest way is to create a single vhost file within a folder for a specific system, for example /var/www/html/public/wp/5-9-3/wp.conf.
-
-## How to run symfony/laravel application (when DocumentRoot is public folder)? 
-These frameworks require that the DocumentRoot folder in the web server configuration be set to a public folder. This can be solved in two ways. A custom virtual host can be created, or a .htaccess file with the following content can be added within the project:
-      
-      <IfModule mod_rewrite.c>
-       Options +FollowSymLinks
-       RewriteEngine On
-
-       RewriteCond %{REQUEST_URI} !^/public/
-
-       RewriteCond %{REQUEST_FILENAME} !-d
-       RewriteCond %{REQUEST_FILENAME} !-f
-
-
-
-       RewriteRule ^(.*)$ /public/$1
-       #RewriteRule ^ index.php [L]
-       RewriteRule ^(/)?$ public/index.php [L]
-      </IfModule>
 ## System vs Integration ? 
 The idea is to separate system and integration in different directories, and to connect them with Linux symlinks. Here is description of that process:
 Add your system installation in folder */var/www/html/public/[system-name]/[system-version]* and install your system.
@@ -104,4 +82,26 @@ Server Configuration:
   - Absolute path on server: */var/www/html/public/[system-name]/[system-version]*
 - Click Apply and check if it works.
 ![debug2](https://user-images.githubusercontent.com/101107199/180241456-73479384-e2d6-46f4-a27a-609d563117f3.png)
+
+## How to create custom vhost ?
+The simplest way is to create a single vhost file within a folder for a specific system, for example /var/www/html/public/wp/5-9-3/wp.conf.
+
+## How to run symfony/laravel application (when DocumentRoot is public folder)? 
+These frameworks require that the DocumentRoot folder in the web server configuration be set to a public folder. This can be solved in two ways. A custom virtual host can be created, or a .htaccess file with the following content can be added within the project:
+      
+      <IfModule mod_rewrite.c>
+       Options +FollowSymLinks
+       RewriteEngine On
+
+       RewriteCond %{REQUEST_URI} !^/public/
+
+       RewriteCond %{REQUEST_FILENAME} !-d
+       RewriteCond %{REQUEST_FILENAME} !-f
+
+
+
+       RewriteRule ^(.*)$ /public/$1
+       #RewriteRule ^ index.php [L]
+       RewriteRule ^(/)?$ public/index.php [L]
+      </IfModule>
 
