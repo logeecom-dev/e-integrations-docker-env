@@ -87,8 +87,9 @@ Server Configuration:
 - Click Apply and check if it works.
 ![debug2](https://user-images.githubusercontent.com/101107199/180241456-73479384-e2d6-46f4-a27a-609d563117f3.png)
 
-## How to create custom vhost ?
- > Note: The vhost file must end with .conf.
+## How to create custom vhost (if needed for an exotic system or for a custom php project )?
+ > Note: The vhost file must end with .conf .
+
 The simplest way is to create a single vhost file within a folder for a specific system or custom project (for example /var/www/html/public/[system-name]/[system-version]/vhost.conf).
 
 ## How to run symfony/laravel application (when DocumentRoot is public folder)? 
