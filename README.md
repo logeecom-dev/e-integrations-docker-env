@@ -88,7 +88,8 @@ Server Configuration:
 ![debug2](https://user-images.githubusercontent.com/101107199/180241456-73479384-e2d6-46f4-a27a-609d563117f3.png)
 
 ## How to create custom vhost ?
-The simplest way is to create a single vhost file within a folder for a specific system, for example /var/www/html/public/wp/5-9-3/wp.conf.
+ > Note: The vhost file must end with .conf.
+The simplest way is to create a single vhost file within a folder for a specific system or custom project (for example /var/www/html/public/[system-name]/[system-version]/vhost.conf).
 
 ## How to run symfony/laravel application (when DocumentRoot is public folder)? 
 These frameworks require that the DocumentRoot folder in the web server configuration be set to a public folder. This can be solved in two ways. A custom virtual host can be created, or a .htaccess file with the following content can be added within the project:
