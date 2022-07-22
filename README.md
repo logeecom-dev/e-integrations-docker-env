@@ -11,12 +11,16 @@
 ## How to run a docker environment?
 - Create project folder 
 ```sh
-mkdir -p e-integrations
+mkdir -p e-integrations && cd e-integrations
 ```
 - Create a docker compose file based on the following [template](https://github.com/logeecom-dev/e-integrations-docker-env/blob/main/docker-compose.dist). 
  > Note: Elasticsearch is optional and it has been added to the compose file, due to the version of the magento that requires it.
-- Customize [env variables](https://docs.dockware.io/features/environment-variables)
+ 
+- Customize [env variables](https://docs.dockware.io/features/environment-variables) (optional)
 - Create bind mounts (systems and integrations folders) 
+```sh
+mkdir -p integrations && mkdir -p systems
+```
 - docker compose up -d 
 
 ## How to create custom vhost ?
