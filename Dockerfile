@@ -18,4 +18,16 @@ RUN echo "IncludeOptional /var/www/html/public/*/*/*.conf" >> /etc/apache2/apach
     && sed -i  's/xdebug.remote_autostart = 0//g' /etc/php/5.6/fpm/conf.d/20-xdebug.ini \
     && echo "\nxdebug.remote_autostart = 1" >> /etc/php/7.1/fpm/conf.d/20-xdebug.ini \
     && echo "\nxdebug.remote_autostart = 1" >> /etc/php/7.0/fpm/conf.d/20-xdebug.ini \
-    && echo "\nxdebug.remote_autostart = 1" >> /etc/php/5.6/fpm/conf.d/20-xdebug.ini
+    && echo "\nxdebug.remote_autostart = 1" >> /etc/php/5.6/fpm/conf.d/20-xdebug.ini \
+    && apt-get update \
+        && apt-get install -y php5.6-mcrypt \
+        && apt-get install -y php5.6-sqlite3 \
+        && apt-get install -y php7.0-sqlite3 \
+        && apt-get install -y php7.1-sqlite3 \
+        && apt-get install -y php7.2-sqlite3 \
+        && apt-get install -y php7.3-sqlite3 \
+        && apt-get install -y php7.4-sqlite3 \
+        && apt-get install -y php8.0-sqlite3 \
+        && apt-get install -y php8.1-sqlite3 \
+        && apt-get remove -y dh-php \
+        && rm -rf /var/lib/apt/lists/* /var/cache/apt/*
