@@ -110,4 +110,14 @@ These frameworks require that the DocumentRoot folder in the web server configur
        #RewriteRule ^ index.php [L]
        RewriteRule ^(/)?$ public/index.php [L]
       </IfModule>
+## How to access docker container via console:
+```
+docker exec -it logeecom-dev bash
+```
 
+## How to switch php version directly from docker container:
+ - Go to /var/www folder in docker container
+ - Run command:
+  ```
+  make switch-php version={php-version}
+  ```
