@@ -120,6 +120,7 @@ docker exec -it logeecom-dev bash
    ```
   cd /var/www
   ```
+  
  - Run command:
   ```
   make switch-php version={php-version}
