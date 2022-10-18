@@ -117,6 +117,9 @@ docker exec -it logeecom-dev bash
 
 ## How to switch php version directly from docker container:
  - Go to /var/www folder in docker container
+   ```
+  cd /var/www
+  ```
  - Run command:
   ```
   make switch-php version={php-version}
